@@ -1,0 +1,44 @@
+body{
+	color: #fff;
+	background-color: #2f1930;
+}
+.calculator{
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.btn{
+	cursor: pointer;
+	font-size: 2rem;
+	border: 1px solid white;
+	outline: none;
+	background-color: #b16bb2;
+	color: #000;
+	text-align: center;
+	padding-top: 30px;
+}
+.btn:hover{
+	background-color: #d0a6d1;
+}
+.clearButton{
+	grid-column: span 3;
+}
+.resultBtn{
+	grid-column: span 2;
+}
+.output{
+	grid-column: 1 / -1;
+	background-color: rgba(0, 0, 0, .75);
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.currentOperand{
+	font-size: 32px;
+	color: white;
+}

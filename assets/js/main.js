@@ -6,8 +6,10 @@ let finish = false;
 const num = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const operation = ['-', '+', '*', '/'];
 
-const out = document.querySelector('.currentOperand p');
+const out = document.querySelector('.operand p');
+
 const clear = () => {
+
 	a = '';
 	b = '';
 	sign = '';
@@ -16,11 +18,15 @@ const clear = () => {
 };
 
 document.querySelector('.ac').onclick = clear;
+
 document.querySelector('.calculator').onclick = (event) => {
+
 	if (!event.target.classList.contains('btn')) {
+
 		return
 	};
 	if (event.target.classList.contains('ac')) {
+
 		return;
 	};
 
@@ -40,12 +46,14 @@ document.querySelector('.calculator').onclick = (event) => {
 			b += key;
 			out.textContent = b;
 		};
+
 		return;
 	};
 
 	if (operation.includes(key)) {
 		sign = key;
 		out.textContent = sign;
+
 		return
 	};
 
@@ -70,10 +78,13 @@ document.querySelector('.calculator').onclick = (event) => {
 				}
 				a = a / b;
 				break;
+		
 		};
+		
 		finish = true;
 		out.textContent = a;
 		console.log(a, sign, b);
+	
 	};
 };
 

@@ -38,7 +38,8 @@ body{
 	word-wrap: break-word;
 	word-break: break-all;
 }
-.currentOperand{
-	font-size: 32px;
+.operand{
+	margin-left: 10px;
+	font-size: 	30px;
 	color: white;
 }
